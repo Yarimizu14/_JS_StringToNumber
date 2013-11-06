@@ -3,8 +3,98 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>サイト名</title>
+	<title>JS_StringToNumber</title>
 	<script type="text/javascript">
+        var cases = {
+            'Number(value)' : function(value) {
+                return Number(value);
+            },
+            'parseInt(value)' : function(value) {
+                return parseInt(value);
+            },
+            'parseFloat' : function(value) {
+                return parseFloat(value);
+            },
+            '+value' : function(value) {
+                return +value;
+            },
+            'value - 0' : function(value) {
+                return (value - 0);
+            },
+            'value * 1' : function(value) {
+                return (value * 1);
+            },
+            'value / 1' : function(value) {
+                return (value / 1);
+            },
+            '-(-value)' : function(value) {
+                return (-(-value));
+            },
+            '~~value' : function(value) {
+                return (~~value);
+            },
+            'value&-1' : function(value) {
+                return (value&-1);
+            },
+            'value|0' : function(value) {
+                return (value|0);
+            },
+            'value^0' : function(value) {
+                return (value^0);
+            },
+            'value>>0' : function(value) {
+                return (value>>0);
+            },
+            'value<<0' : function(value) {
+                return (value<<0);
+            }
+        };
+
+        var test = function(value) {
+            document.write('====="' + value + '"の場合=====<br>');
+            var spaces = [], len = 0;
+            for (var key in cases) {
+                spaces = [];
+                len = 20-key.length;
+                for (var i= (len > 0) ? len : 1; i--;) spaces.push('&nbsp;');
+                document.write(key + spaces.join(''), '  =>  ', cases[key](value) + '<br>');
+                //document.write('<span style="display:inline-block;width:150px;">' + key + '</span>', '  =>  ', cases[key](value) + '<br>');
+            };
+        }
+
+        /* 文字列                            c */
+        var str = '123';
+        test(str);
+
+        /* 文字列(数字以外が混じっている場合) */
+        var str2 = '123hoge'
+        test(str2);
+
+        /* 文字列(数字以外が混じっている場合) */
+        var str3 = 'hoge123'
+        test(str3);
+
+        /* 先頭に0がある場合                  */
+        test('010');
+        test('010.50');
+        test('010.50hoge');
+
+        /* 文字列(数字以外が混じっている場合) */
+        var str4 = '123.456hoge'
+        test(str4);
+
+        /* Booleanの場合            */
+        test(true);
+        test(false);
+
+        /* 空文字の場合             */
+        test('');
+
+        /* Infinityの場合             */
+        test(1/0);
+
+
+
 	</script>
 </head>
 <body>
