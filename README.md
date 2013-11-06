@@ -29,7 +29,7 @@ Number(value)        => 123
 
 parseInt(value)      => 123
 
-parseFloat           => 123
+parseFloat(value)    => 123
 
 +value               => 123
 
@@ -59,7 +59,7 @@ Number(value)        => NaN
 
 parseInt(value)      => 123
 
-parseFloat           => 123
+parseFloat(value)    => 123
 
 +value               => NaN
 
@@ -89,7 +89,7 @@ Number(value)        => NaN
 
 parseInt(value)      => NaN
 
-parseFloat           => NaN
+parseFloat(value)    => NaN
 
 +value               => NaN
 
@@ -119,7 +119,7 @@ Number(value)        => 10
 
 parseInt(value)      => 10
 
-parseFloat           => 10
+parseFloat(value)    => 10
 
 +value               => 10
 
@@ -149,7 +149,7 @@ Number(value)        => 10.5
 
 parseInt(value)      => 10
 
-parseFloat           => 10.5
+parseFloat(value)    => 10.5
 
 +value               => 10.5
 
@@ -179,7 +179,7 @@ Number(value)        => NaN
 
 parseInt(value)      => 10
 
-parseFloat           => 10.5
+parseFloat(value)    => 10.5
 
 +value               => NaN
 
@@ -209,7 +209,7 @@ Number(value)        => NaN
 
 parseInt(value)      => 123
 
-parseFloat           => 123.456
+parseFloat(value)    => 123.456
 
 +value               => NaN
 
@@ -239,7 +239,7 @@ Number(value)        => 1
 
 parseInt(value)      => NaN
 
-parseFloat           => NaN
+parseFloat(value)    => NaN
 
 +value               => 1
 
@@ -269,7 +269,7 @@ Number(value)        => 0
 
 parseInt(value)      => NaN
 
-parseFloat           => NaN
+parseFloat(value)    => NaN
 
 +value               => 0
 
@@ -293,13 +293,13 @@ value>>0             => 0
 
 value<<0             => 0
 
-=====""（空文字列）の場合=====
+=====""（空文字）の場合=====
 
 Number(value)        => 0
 
 parseInt(value)      => NaN
 
-parseFloat           => NaN
+parseFloat(value)    => NaN
 
 +value               => 0
 
@@ -329,7 +329,7 @@ Number(value)        => -10
 
 parseInt(value)      => -10
 
-parseFloat           => -10
+parseFloat(value)    => -10
 
 +value               => -10
 
@@ -359,7 +359,7 @@ Number(value)        => -10.5
 
 parseInt(value)      => -10
 
-parseFloat           => -10.5
+parseFloat(value)    => -10.5
 
 +value               => -10.5
 
@@ -389,7 +389,7 @@ Number(value)        => NaN
 
 parseInt(value)      => -10
 
-parseFloat           => -10.5
+parseFloat(value)    => -10.5
 
 +value               => NaN
 
@@ -419,7 +419,7 @@ Number(value)        => NaN
 
 parseInt(value)      => -10
 
-parseFloat           => -10
+parseFloat(value)    => -10
 
 +value               => NaN
 
@@ -449,7 +449,7 @@ Number(value)        => NaN
 
 parseInt(value)      => NaN
 
-parseFloat           => NaN
+parseFloat(value)    => NaN
 
 +value               => NaN
 
@@ -479,7 +479,7 @@ Number(value)        => Infinity
 
 parseInt(value)      => NaN
 
-parseFloat           => Infinity
+parseFloat(value)    => Infinity
 
 +value               => Infinity
 
