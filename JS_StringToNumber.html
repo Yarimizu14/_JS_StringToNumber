@@ -57,7 +57,7 @@
                 spaces = [];
                 len = 20-key.length;
                 for (var i= (len > 0) ? len : 1; i--;) spaces.push('&nbsp;');
-                document.write(key + spaces.join(''), '  =>  ', cases[key](value) + '<br>');
+                document.write(key + spaces.join(''), '  =>  ', cases[key](value) + '<br><br>');
                 //document.write('<span style="display:inline-block;width:150px;">' + key + '</span>', '  =>  ', cases[key](value) + '<br>');
             };
         }
@@ -92,9 +92,6 @@
 
         /* Infinityの場合             */
         test(1/0);
-
-
-
 	</script>
 </head>
 <body>
